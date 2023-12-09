@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ip</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- ------------------------------------------------------------------------------------------------------>
+
+  <link rel="stylesheet" type="text/css" href="testcss.css">
+</head>
+<body>
+
+<header>
+  <div class="contact-info">
+    <img src="th.jpg" alt="Avatar">
+    
+      <p class="phone-link" onclick="openPhoneWindow()">Phone: 01100519073</p>
+      <p class="email-link" onclick="openEmailWindow()">Email: nouralgmal123.com</p>
+    
+  </div>
+  <div class="social-icons">
+    <a style="color: blue;" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a style="color: green;" href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a style="color: white;" href="mailto:nouralgmal123.com" target="_blank"><i class="far fa-envelope"></i></a>
+  </div>
+</header>
+<!-- ------------------------------------------------------------------------------------------------------>
+
+<header>
+   <nav class="navbar">
+    <ul>
+      <li><a href="file:///F:/Html/test.html" class="active">Home</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Card</a></li>
+      <li>
+      <span style="color:white;">Language</span>
+        <input list="1">
+      <datalist  id="1" >
+    <option value="العربيه"></option>
+    <option value="English"></option>
+        </datalist>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="window">
+  <div class="icon-links">
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="fac1.jpg" alt="Facebook">
+      Facebook
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="link.jpg" alt="LinkedIn">
+      LinkedIn
+    </a>
+    <a href="https://www.messenger.com" target="_blank">
+      <img src="mas.jpg" alt="Messenger">
+      Messenger
+    </a>
+    <a href="https://web.whatsapp.com" target="_blank">
+      <img src="wh.jpg" alt="WhatsApp">
+      whatsapp
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="inst.jpg" alt="Instagram">
+      instagram
+    </a>
+    <a href="mailto:youremail@example.com" target="_blank">
+      <img src="gmi.jpg" alt="Email">
+      Email
+    </a>
+  </div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------------>
+<footer>
+    <div class="left-section">
+    <input list="2">
+  <datalist  id="2" >
+    <option onclick="scrollToSection('section1')"  value="Section 1"></option>
+    <option onclick="scrollToSection('section2')"value="Section 2"></option>
+    <option onclick="scrollToSection('section3')" value="Section 3"></option>
+  </datalist>
+    </div>
+
+    <div class="center-section">
+      <a href="file:///F:/Html/test.html" class="active">Home</a>
+      <a href="#">Product</a>
+    </div>
+
+    <div class="right-section">
+     <a href="https://www.facebook.com" target="_blank"><img  src="fac1.jpg" alt="Facebook"></a>
+     <a href="https://web.whatsapp.com" target="_blank"><img  src="wh.jpg" alt="WhatsApp"></a>
+      <a href="mailto:nouralgmal123@gmail.com" target="_blank"><img  src="gmi.jpg" alt="Email"></a>
+      <a style="padding-right: 20px;" href="https://twitter.com/" target="_blank"><img  src="x.jpg" alt="Twitter"></a>
+    </div>
+  </footer>
+<!-------------------------------------------------------------------------------------------------------------->
+<script>
+  function openEmailWindow() {
+    window.open('mailto:nouralgmal123.com', '_blank', 'width=500,height=500');
+  }
+
+  function openPhoneWindow() {
+    window.open('https://wa.me/01100519073', '_blank', 'width=500,height=500');
+  }
+  function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
+
+
+////////////////////////////////////////////////////////////////////////////////////////////  cssss /////////////////////////////////////////////////////////////////////////////
+*/////////////////////////////////////////////////////////////////////////////////////////////     //////////////////////////////////////////////////////////
+header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #222;
+      
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      color: red;
+    }
+
+    .contact-info img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    .email-link,
+    .phone-link{
+    	color: red;
+    }
+    .email-link:hover,
+    .phone-link:hover {
+    color: blue;
+    }
+ 
+    .social-icons i {
+      ursor: pointer;
+      text-decoration: none;
+      font-size: 25px;
+      padding-right: 10px;
+    }
+ /*------------------------------------------------------*/
+    .navbar {
+      background-color: #222;
+     padding-top: 10px;
+      padding-bottom: 8px;
+
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+    }
+
+    .navbar li {
+      margin-right: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    .navbar a:hover {
+      color: lightblue;
+    }
+
+    .navbar a.active {
+      color: lightblue;
+    }
+/*--------------------------------------------------------------------------------------------*/
+
+.window {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: #fff;
+      padding: 10px;
+      /*box-shadow: 0px 5px 5px  5px rgba(0, 0, 0, 0.3);*/
+    }
+
+    .icon-links {
+     /* flex-direction: column;*/
+      align-items: center;
+    }
+
+    .icon-links a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: white;
+    
+
+    }
+    .icon-links a:hover{
+    	color: red;
+    }
+
+    .icon-links img {
+      width: 30px;
+      height: 30px;
+      margin-right: 0px;
+    }
+ /*-----------------------------------------------------*/
+ footer {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .left-section ul {
+      list-style: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    footer .left-section ul li {
+      margin-bottom: 10px;
+    }
+
+    footer .center-section {
+      text-align: center;
+    }
+    footer .center-section a {
+      text-decoration: none;
+      size: 50px;
+      color: white;
+      padding-left:60px ;
+    }
+    footer .center-section a.active {
+      text-decoration: none;
+      size: 50px;
+      color:lightblue;
+      padding-left:60px ;
+    }
+    footer .center-section a:hover {
+      text-decoration: none;
+      size: 70px;
+      color: lightblue;
+    }
+
+    footer .right-section {
+      text-align: right;
+      display: flex;
+      align-items: center;
+    }
+
+    footer .right-section a {
+      color: #333;
+      margin-right: 10px;
+      text-decoration: none;
+      
+    }
+    footer .right-section img{
+    	width: 50px;
+    }
+ 
+    footer .right-section a:hover {
+      color: lightblue;
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
